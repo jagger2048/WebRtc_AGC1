@@ -84,12 +84,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include\AduioFile\;$(ProjectDir)include\audio_processing\;$(ProjectDir)include\rtc_base\;$(ProjectDir)include\agc\legacy\;$(ProjectDir)include\agc\;$(ProjectDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -147,10 +148,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\AduioFile\AudioFile.h" />
+    <ClInclude Include="include\agc\legacy\analog_agc.h" />
+    <ClInclude Include="include\agc\legacy\digital_agc.h" />
+    <ClInclude Include="include\agc\legacy\gain_control.h" />
+    <ClInclude Include="include\agc\legacy\typedefs.h" />
+    <ClInclude Include="include\audio_processing\audio_util.h" />
+    <ClInclude Include="include\audio_processing\dot_product_with_scale.h" />
+    <ClInclude Include="include\audio_processing\fft4g.h" />
+    <ClInclude Include="include\audio_processing\signal_processing_library.h" />
+    <ClInclude Include="include\audio_processing\spl_inl.h" />
+    <ClInclude Include="include\audio_processing\spl_sqrt_floor.h" />
+    <ClInclude Include="include\rtc_base\checks.h" />
+    <ClInclude Include="include\rtc_base\compile_assert_c.h" />
+    <ClInclude Include="include\rtc_base\constructormagic.h" />
+    <ClInclude Include="include\rtc_base\inline.h" />
+    <ClInclude Include="include\rtc_base\safe_compare.h" />
+    <ClInclude Include="include\rtc_base\sanitizer.h" />
+    <ClInclude Include="include\rtc_base\type_traits.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="WebrtcAGC.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\AduioFile\AudioFile.cpp" />
+    <ClCompile Include="include\agc\legacy\analog_agc.c" />
+    <ClCompile Include="include\agc\legacy\digital_agc.c" />
+    <ClCompile Include="include\audio_processing\audio_util.cc" />
+    <ClCompile Include="include\audio_processing\copy_set_operations.c" />
+    <ClCompile Include="include\audio_processing\division_operations.c" />
+    <ClCompile Include="include\audio_processing\dot_product_with_scale.cc" />
+    <ClCompile Include="include\audio_processing\fft4g.c" />
+    <ClCompile Include="include\audio_processing\resample_by_2.c" />
+    <ClCompile Include="include\audio_processing\spl_inl.c" />
+    <ClCompile Include="include\audio_processing\spl_sqrt.c" />
+    <ClCompile Include="include\audio_processing\spl_sqrt_floor.c" />
+    <ClCompile Include="include\rtc_base\checks.cc" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

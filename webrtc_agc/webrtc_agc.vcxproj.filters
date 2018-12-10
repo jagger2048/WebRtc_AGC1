@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="AudioFile">
+      <UniqueIdentifier>{8b07dbb9-49ee-42cb-aa59-64edca797d60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Legacy AGC">
+      <UniqueIdentifier>{889bb7d8-8942-4f39-b848-e3157c3de5d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rtc base">
+      <UniqueIdentifier>{3f772c21-4db1-4f5f-bffa-7c38bcb3c85a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="aduio processing">
+      <UniqueIdentifier>{a67efe49-cd9d-4482-9955-9c8180a37a8f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -21,6 +33,63 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="include\AduioFile\AudioFile.h">
+      <Filter>AudioFile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\checks.h">
+      <Filter>rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\compile_assert_c.h">
+      <Filter>rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\constructormagic.h">
+      <Filter>rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\inline.h">
+      <Filter>rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\safe_compare.h">
+      <Filter>rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\type_traits.h">
+      <Filter>rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\audio_util.h">
+      <Filter>aduio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\dot_product_with_scale.h">
+      <Filter>aduio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\fft4g.h">
+      <Filter>aduio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\signal_processing_library.h">
+      <Filter>aduio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\spl_inl.h">
+      <Filter>aduio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\spl_sqrt_floor.h">
+      <Filter>aduio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="WebrtcAGC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\agc\legacy\analog_agc.h">
+      <Filter>Legacy AGC</Filter>
+    </ClInclude>
+    <ClInclude Include="include\agc\legacy\digital_agc.h">
+      <Filter>Legacy AGC</Filter>
+    </ClInclude>
+    <ClInclude Include="include\agc\legacy\gain_control.h">
+      <Filter>Legacy AGC</Filter>
+    </ClInclude>
+    <ClInclude Include="include\agc\legacy\typedefs.h">
+      <Filter>Legacy AGC</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\sanitizer.h">
+      <Filter>rtc base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -28,6 +97,45 @@
     </ClCompile>
     <ClCompile Include="webrtc_agc.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="include\AduioFile\AudioFile.cpp">
+      <Filter>AudioFile</Filter>
+    </ClCompile>
+    <ClCompile Include="include\rtc_base\checks.cc">
+      <Filter>rtc base</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\audio_util.cc">
+      <Filter>aduio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\dot_product_with_scale.cc">
+      <Filter>aduio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\fft4g.c">
+      <Filter>aduio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\spl_sqrt_floor.c">
+      <Filter>aduio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\copy_set_operations.c">
+      <Filter>aduio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\agc\legacy\analog_agc.c">
+      <Filter>Legacy AGC</Filter>
+    </ClCompile>
+    <ClCompile Include="include\agc\legacy\digital_agc.c">
+      <Filter>Legacy AGC</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\division_operations.c">
+      <Filter>aduio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\resample_by_2.c">
+      <Filter>aduio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\spl_inl.c">
+      <Filter>aduio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\spl_sqrt.c">
+      <Filter>aduio processing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
