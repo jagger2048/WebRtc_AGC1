@@ -16,7 +16,7 @@
 
 #include "checks.h"
 
-namespace webrtc {
+//namespace webrtc {
 
 SparseFIRFilter::SparseFIRFilter(const float* nonzero_coeffs,
                                  size_t num_nonzero_coeffs,
@@ -61,4 +61,4 @@ void SparseFIRFilter::Filter(const float* in, size_t length, float* out) {
   }
 }
 
-}  // namespace webrtc
+//}  // namespace webrtc

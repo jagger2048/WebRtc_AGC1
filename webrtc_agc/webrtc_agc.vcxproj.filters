@@ -25,14 +25,11 @@
     <Filter Include="aduio processing">
       <UniqueIdentifier>{a67efe49-cd9d-4482-9955-9c8180a37a8f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Splitting filter">
+      <UniqueIdentifier>{3627e5ea-f1d7-4e14-9bc3-235ebcb6859d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="include\AduioFile\AudioFile.h">
       <Filter>AudioFile</Filter>
     </ClInclude>
@@ -90,11 +87,17 @@
     <ClInclude Include="include\rtc_base\sanitizer.h">
       <Filter>rtc base</Filter>
     </ClInclude>
+    <ClInclude Include="my_splitting_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\splitting_filter\sparse_fir_filter.h">
+      <Filter>Splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\splitting_filter\three_band_filter_bank.h">
+      <Filter>Splitting filter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="webrtc_agc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -137,5 +140,19 @@
     <ClCompile Include="include\audio_processing\spl_sqrt.c">
       <Filter>aduio processing</Filter>
     </ClCompile>
+    <ClCompile Include="include\splitting_filter\sparse_fir_filter.cc">
+      <Filter>Splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="include\splitting_filter\splitting_filter.c">
+      <Filter>Splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="include\splitting_filter\three_band_filter_bank.cc">
+      <Filter>Splitting filter</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\splitting_filter\readme.txt">
+      <Filter>Splitting filter</Filter>
+    </Text>
   </ItemGroup>
 </Project>

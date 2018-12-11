@@ -45,8 +45,8 @@
 //#include "rtc_base/checks.h"
 #include "checks.h"
 
-namespace webrtc {
-namespace {
+//namespace webrtc {
+//namespace {
 
 const size_t kNumBands = 3;
 const size_t kSparsity = 4;
@@ -109,7 +109,7 @@ void Upsample(const float* in, size_t split_length, size_t offset, float* out) {
   }
 }
 
-}  // namespace
+//}  // namespace
 
 // Because the low-pass filter prototype has half bandwidth it is possible to
 // use a DCT to shift it in both directions at the same time, to the center
@@ -217,4 +217,4 @@ void ThreeBandFilterBank::UpModulate(const float* const* in,
   }
 }
 
-}  // namespace webrtc
+//}  // namespace webrtc

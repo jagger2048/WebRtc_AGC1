@@ -16,7 +16,7 @@
 
 //#include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+//namespace webrtc {
 
 // A Finite Impulse Response filter implementation which takes advantage of a
 // sparse structure with uniformly distributed non-zero coefficients.
@@ -48,6 +48,6 @@ class SparseFIRFilter final {
   //RTC_DISALLOW_COPY_AND_ASSIGN(SparseFIRFilter);
 };
 
-}  // namespace webrtc
+//}  // namespace webrtc
 
 #endif  // COMMON_AUDIO_SPARSE_FIR_FILTER_H_

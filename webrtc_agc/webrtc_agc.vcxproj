@@ -90,7 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)include\AduioFile\;$(ProjectDir)include\audio_processing\;$(ProjectDir)include\rtc_base\;$(ProjectDir)include\agc\legacy\;$(ProjectDir)include\agc\;$(ProjectDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include\AduioFile\;$(ProjectDir)include\audio_processing\;$(ProjectDir)include\rtc_base\;$(ProjectDir)include\agc\legacy\;$(ProjectDir)include\agc\;$(ProjectDir)include\;$(ProjectDir)include\splitting_filter\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -166,8 +166,9 @@
     <ClInclude Include="include\rtc_base\safe_compare.h" />
     <ClInclude Include="include\rtc_base\sanitizer.h" />
     <ClInclude Include="include\rtc_base\type_traits.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="include\splitting_filter\sparse_fir_filter.h" />
+    <ClInclude Include="include\splitting_filter\three_band_filter_bank.h" />
+    <ClInclude Include="my_splitting_filter.h" />
     <ClInclude Include="WebrtcAGC.h" />
   </ItemGroup>
   <ItemGroup>
@@ -184,13 +185,13 @@
     <ClCompile Include="include\audio_processing\spl_sqrt.c" />
     <ClCompile Include="include\audio_processing\spl_sqrt_floor.c" />
     <ClCompile Include="include\rtc_base\checks.cc" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="include\splitting_filter\sparse_fir_filter.cc" />
+    <ClCompile Include="include\splitting_filter\splitting_filter.c" />
+    <ClCompile Include="include\splitting_filter\three_band_filter_bank.cc" />
     <ClCompile Include="webrtc_agc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\splitting_filter\readme.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
