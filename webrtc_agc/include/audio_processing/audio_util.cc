@@ -11,7 +11,7 @@
 //#include "common_audio/include/audio_util.h"
 #include "audio_util.h"
 
-namespace webrtc {
+//namespace webrtc {
 
 void FloatToS16(const float* src, size_t size, int16_t* dest) {
   for (size_t i = 0; i < size; ++i)
@@ -47,4 +47,4 @@ void DownmixInterleavedToMono<int16_t>(const int16_t* interleaved,
                                                  num_channels, deinterleaved);
 }
 
-}  // namespace webrtc
+//}  // namespace webrtc

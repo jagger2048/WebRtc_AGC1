@@ -53,11 +53,11 @@ public:
 			float data_in_float[480]{};
 			float bands_p[3][160] = {};
 			float *data_out_float[3]{ bands_p[0],bands_p[1],bands_p[2] };	// a block of continuous memory is sugested 
-			webrtc::S16ToFloat(data, 480, data_in_float);
+			S16ToFloat(data, 480, data_in_float);
 			three_bands_filter_48k->Analysis(data_in_float, 480, data_out_float);
-			webrtc::FloatToS16(data_out_float[0], 160, bands[0]);
-			webrtc::FloatToS16(data_out_float[1], 160, bands[1]);
-			webrtc::FloatToS16(data_out_float[2], 160, bands[2]);
+			FloatToS16(data_out_float[0], 160, bands[0]);
+			FloatToS16(data_out_float[1], 160, bands[1]);
+			FloatToS16(data_out_float[2], 160, bands[2]);
 		}
 	
 		return 0;
@@ -75,11 +75,11 @@ public:
 			//float *data_in_float[3]{ new float[160]{},new float[160]{},new float[160]{} };
 			float *data_in_float[3]{ tmp[0],tmp[1],tmp[2] };
 			float data_out_float[480]{};
-			webrtc::S16ToFloat(bands[0], 160, data_in_float[0]);	// |bands|'s memory may not be continous,it's better to 
-			webrtc::S16ToFloat(bands[1], 160, data_in_float[1]);	// convert it from int16_t into float band by band.
-			webrtc::S16ToFloat(bands[2], 160, data_in_float[2]);
+			S16ToFloat(bands[0], 160, data_in_float[0]);	// |bands|'s memory may not be continous,it's better to 
+			S16ToFloat(bands[1], 160, data_in_float[1]);	// convert it from int16_t into float band by band.
+			S16ToFloat(bands[2], 160, data_in_float[2]);
 			three_bands_filter_48k->Synthesis(data_in_float, 160, data_out_float);
-			webrtc::FloatToS16(data_out_float, 480, data);
+			FloatToS16(data_out_float, 480, data);
 		}
 		return 0;
 	};
@@ -91,11 +91,11 @@ public:
 		{
 			int16_t data_out_int16[2][160]{ };
 			int16_t data_in_int16[320]{};
-			webrtc::FloatToS16(data, 320, data_in_int16);
+			FloatToS16(data, 320, data_in_int16);
 			// analysis
 			WebRtcSpl_AnalysisQMF(data_in_int16, 320, data_out_int16[0], data_out_int16[1], TwoBands.analysis_state1, TwoBands.analysis_state2);
-			webrtc::S16ToFloat(data_out_int16[0], 160, bands[0]);
-			webrtc::S16ToFloat(data_out_int16[1], 160, bands[1]);
+			S16ToFloat(data_out_int16[0], 160, bands[0]);
+			S16ToFloat(data_out_int16[1], 160, bands[1]);
 		}
 		else if (sample_rate_ == 48000) {
 			three_bands_filter_48k->Analysis(data, 480, bands);
@@ -107,9 +107,9 @@ public:
 		{
 			int16_t data_in_int16[2][160]{};
 			int16_t data_out_int16[320]{};
-			webrtc::FloatToS16(bands[0], 320, data_in_int16[0]);
+			FloatToS16(bands[0], 320, data_in_int16[0]);
 			WebRtcSpl_SynthesisQMF(data_in_int16[0], data_in_int16[1], 160, data_out_int16, TwoBands.synthesis_state1, TwoBands.synthesis_state2);
-			webrtc::S16ToFloat(data_out_int16, 320, data);
+			S16ToFloat(data_out_int16, 320, data);
 		}
 		else if (sample_rate_ == 48000) {
 			three_bands_filter_48k->Synthesis(bands, 160, data);

@@ -18,9 +18,9 @@
 #include <limits>
 
 //#include "rtc_base/checks.h"
-#include "checks.h"
+//#include "checks.h"
 
-namespace webrtc {
+//namespace webrtc {
 
 typedef std::numeric_limits<int16_t> limits_int16;
 
@@ -81,7 +81,7 @@ inline float DbfsToFloatS16(float v) {
 }
 
 inline float FloatS16ToDbfs(float v) {
-  RTC_DCHECK_GE(v, 0);
+  //RTC_DCHECK_GE(v, 0);
 
   // kMinDbfs is equal to -20.0 * log10(-limits_int16::min())
   static constexpr float kMinDbfs = -90.30899869919436f;
@@ -181,8 +181,8 @@ void DownmixInterleavedToMonoImpl(const T* interleaved,
                                   size_t num_frames,
                                   int num_channels,
                                   T* deinterleaved) {
-  RTC_DCHECK_GT(num_channels, 0);
-  RTC_DCHECK_GT(num_frames, 0);
+  //RTC_DCHECK_GT(num_channels, 0);
+  //RTC_DCHECK_GT(num_frames, 0);
 
   const T* const end = interleaved + num_frames * num_channels;
 
@@ -210,6 +210,6 @@ void DownmixInterleavedToMono<int16_t>(const int16_t* interleaved,
                                        int num_channels,
                                        int16_t* deinterleaved);
 
-}  // namespace webrtc
+//}  // namespace webrtc
 
 #endif  // COMMON_AUDIO_INCLUDE_AUDIO_UTIL_H_
