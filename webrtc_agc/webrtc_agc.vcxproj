@@ -168,6 +168,8 @@
     <ClInclude Include="include\rtc_base\type_traits.h" />
     <ClInclude Include="include\splitting_filter\sparse_fir_filter.h" />
     <ClInclude Include="include\splitting_filter\three_band_filter_bank.h" />
+    <ClInclude Include="mThreeBandFilter.h" />
+    <ClInclude Include="my_sparse_fir_fliter.h" />
     <ClInclude Include="my_splitting_filter.h" />
     <ClInclude Include="WebrtcAGC.h" />
   </ItemGroup>

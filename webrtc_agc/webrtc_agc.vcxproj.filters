@@ -28,6 +28,9 @@
     <Filter Include="Splitting filter">
       <UniqueIdentifier>{3627e5ea-f1d7-4e14-9bc3-235ebcb6859d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="mySplittingFilter">
+      <UniqueIdentifier>{f1253e9a-2b0d-47e4-9d6c-6f326bfb6776}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AduioFile\AudioFile.h">
@@ -95,6 +98,12 @@
     </ClInclude>
     <ClInclude Include="include\splitting_filter\three_band_filter_bank.h">
       <Filter>Splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="mThreeBandFilter.h">
+      <Filter>mySplittingFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="my_sparse_fir_fliter.h">
+      <Filter>mySplittingFilter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
