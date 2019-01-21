@@ -168,7 +168,8 @@
     <ClInclude Include="include\rtc_base\type_traits.h" />
     <ClInclude Include="include\splitting_filter\sparse_fir_filter.h" />
     <ClInclude Include="include\splitting_filter\three_band_filter_bank.h" />
-    <ClInclude Include="mThreeBandFilter.h" />
+    <ClInclude Include="my_splitting_filter_c.h" />
+    <ClInclude Include="my_three_band_filter.h" />
     <ClInclude Include="my_sparse_fir_fliter.h" />
     <ClInclude Include="my_splitting_filter.h" />
     <ClInclude Include="WebrtcAGC.h" />
@@ -188,7 +189,7 @@
     <ClCompile Include="include\audio_processing\spl_sqrt_floor.c" />
     <ClCompile Include="include\rtc_base\checks.cc" />
     <ClCompile Include="include\splitting_filter\sparse_fir_filter.cc" />
-    <ClCompile Include="include\splitting_filter\splitting_filter.c" />
+    <ClCompile Include="include\splitting_filter\two_band_QMF_filter.c" />
     <ClCompile Include="include\splitting_filter\three_band_filter_bank.cc" />
     <ClCompile Include="webrtc_agc.cpp" />
   </ItemGroup>

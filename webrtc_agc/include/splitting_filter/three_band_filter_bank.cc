@@ -43,7 +43,7 @@
 #endif // !M_PI
 
 //#include "rtc_base/checks.h"
-#include "checks.h"
+//#include "checks.h"
 
 //namespace webrtc {
 //namespace {
@@ -149,7 +149,7 @@ ThreeBandFilterBank::~ThreeBandFilterBank() = default;
 void ThreeBandFilterBank::Analysis(const float* in,
                                    size_t length,
                                    float* const* out) {
-  RTC_CHECK_EQ(in_buffer_.size(), rtc::CheckedDivExact(length, kNumBands));
+  //RTC_CHECK_EQ(in_buffer_.size(), rtc::CheckedDivExact(length, kNumBands));
   for (size_t i = 0; i < kNumBands; ++i) {
     memset(out[i], 0, in_buffer_.size() * sizeof(*out[i]));
   }
@@ -173,7 +173,7 @@ void ThreeBandFilterBank::Analysis(const float* in,
 void ThreeBandFilterBank::Synthesis(const float* const* in,
                                     size_t split_length,
                                     float* out) {
-  RTC_CHECK_EQ(in_buffer_.size(), split_length);
+  //RTC_CHECK_EQ(in_buffer_.size(), split_length);
   memset(out, 0, kNumBands * in_buffer_.size() * sizeof(*out));
   for (size_t i = 0; i < kNumBands; ++i) {
     for (size_t j = 0; j < kSparsity; ++j) {

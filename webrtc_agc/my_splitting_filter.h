@@ -10,7 +10,7 @@
 #include "three_band_filter_bank.h"
 #include "signal_processing_library.h"
 #include "audio_util.h"
-// for QMF
+
 struct TwoBandsStates {
 	TwoBandsStates() {
 		memset(analysis_state1, 0, sizeof(analysis_state1));
@@ -25,7 +25,6 @@ struct TwoBandsStates {
 	int synthesis_state1[kStateSize];
 	int synthesis_state2[kStateSize];
 };
-
 //class AudioBuffer
 class mySplittingFilter
 {
@@ -130,13 +129,6 @@ private:
 	int16_t * data_int16_ = 0;
 	int16_t * bands_[3] = {};
 };
-
-
-
-//mySplittingFilter::mySplittingFilter(size_t sample_rate)
-//{
-//}
-
 
 mySplittingFilter::~mySplittingFilter()
 {

@@ -47,6 +47,7 @@ class ThreeBandFilterBank final {
   // |split_length| is the length of each band of |in|. |out| has to have at
   // least a length of 3 * |split_length|.
   void Synthesis(const float* const* in, size_t split_length, float* out);
+  std::vector<std::vector<float>> dct_modulation_;
 
  private:
   void DownModulate(const float* in,
@@ -62,7 +63,6 @@ class ThreeBandFilterBank final {
   std::vector<float> out_buffer_;
   std::vector<std::unique_ptr<SparseFIRFilter>> analysis_filters_;
   std::vector<std::unique_ptr<SparseFIRFilter>> synthesis_filters_;
-  std::vector<std::vector<float>> dct_modulation_;
 };
 
 //}  // namespace webrtc
