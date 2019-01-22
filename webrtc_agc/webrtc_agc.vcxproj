@@ -148,7 +148,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\AduioFile\AudioFile.h" />
     <ClInclude Include="include\agc\legacy\analog_agc.h" />
     <ClInclude Include="include\agc\legacy\digital_agc.h" />
     <ClInclude Include="include\agc\legacy\gain_control.h" />
@@ -176,7 +175,6 @@
     <ClInclude Include="WebrtcAGC.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\AduioFile\AudioFile.cpp" />
     <ClCompile Include="include\agc\legacy\analog_agc.c" />
     <ClCompile Include="include\agc\legacy\digital_agc.c" />
     <ClCompile Include="include\audio_processing\audio_util.cc" />

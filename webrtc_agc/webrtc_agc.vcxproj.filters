@@ -33,9 +33,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\AduioFile\AudioFile.h">
-      <Filter>AudioFile</Filter>
-    </ClInclude>
     <ClInclude Include="include\rtc_base\checks.h">
       <Filter>rtc base</Filter>
     </ClInclude>
@@ -115,9 +112,6 @@
   <ItemGroup>
     <ClCompile Include="webrtc_agc.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="include\AduioFile\AudioFile.cpp">
-      <Filter>AudioFile</Filter>
     </ClCompile>
     <ClCompile Include="include\rtc_base\checks.cc">
       <Filter>rtc base</Filter>
