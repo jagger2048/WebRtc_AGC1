@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <memory>
 
-#include "signal_processing_library.h"	// two_band_qmf
+//#include "signal_processing_library.h"	// two_band_qmf
+#include "two_band_QMF_filter.h"
 #include "my_three_band_filter.h"		// three band filter
 
 void f32_to_s16(const float* pIn, size_t sampleCount, int16_t* pOut )

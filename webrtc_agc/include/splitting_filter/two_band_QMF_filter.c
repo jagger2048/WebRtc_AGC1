@@ -18,7 +18,8 @@
 //#include "checks.h"
 
 #pragma once
-#include "signal_processing_library.h"
+//#include "signal_processing_library.h"
+#include "two_band_QMF_filter.h"
 
 // Maximum number of samples in a low/high-band frame.
 enum
